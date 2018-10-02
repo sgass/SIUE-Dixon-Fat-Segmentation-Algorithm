@@ -22,6 +22,7 @@ def loadDirectory(path, patientID=None, studyID=None, seriesID=None):
         for filename in filenames:
             if filename.endswith('.dcm'):
                 DCMFilenames.append(os.path.join(dirName, filename))
+               
 
     # Loop through each DICOM filename
     for filename in DCMFilenames:
@@ -39,6 +40,7 @@ def loadDirectory(path, patientID=None, studyID=None, seriesID=None):
                 patient = patients[DCMImage.PatientID]
             else:
                 patient = patients.add(DCMImage)
+               
 
         if studyID:
             if DCMImage.StudyInstanceUID != studyID:
