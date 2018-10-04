@@ -4,9 +4,9 @@ import SimpleITK as sitk
 import nrrd
 import numpy as np
 import scipy.ndimage.interpolation
+import skimage.exposure
 import skimage.filters
 import skimage.transform
-import skimage.exposure
 
 import constants
 

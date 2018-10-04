@@ -162,6 +162,9 @@ class MainWindow(QMainWindow, mainWindow_ui.Ui_MainWindow):
         # Should only be one patient so retrieve it
         patient = patients.only()
         # Should only be one study so retrieve the one study
+
+        # doesn't work because of 35 studies
+        # Double loop through studies then series (series is the images
         study = patient.only()
         #
         self.t1Series = []
